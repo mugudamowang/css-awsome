@@ -32,7 +32,7 @@ body {
 
 .topNavBar {
     z-index: 10;
-    padding: 20px;
+    padding: 50px;
     position: sticky;
     top: 0;
     width: 100%;
