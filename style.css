@@ -1,0 +1,112 @@
+body,
+img,
+li,
+ul,
+p,
+div,
+main,
+section,
+footer,
+header,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #232426;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.topNavBar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topNavBar>nav>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.topNavBar>nav>ul>li {
+    margin: 0 20px;
+}
+
+.topNavBar>h1 {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.divider {
+    bottom: 0;
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    border-radius: 5px;
+    display: block;
+    transition: all 1750ms cubic-bezier(1, 0, 0, 1);
+}
+
+.divider.dive {
+    background: linear-gradient(90deg, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
+    width: 100%;
+}
+
+main {
+    position: sticky;
+    transform: scale(1.5);
+    margin: 50px 100px;
+    padding: 50px;
+    border-radius: 3px;
+    border: 3px white solid;
+    transition: all ease-in-out 1500ms;
+}
+
+main.show {
+    transform: scale(1);
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.16), 0 3px 15px rgba(221, 221, 221, 0.521);
+}
+
+.cssList {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all ease-in-out 1000ms;
+}
+
+
+.cssList>div {
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    height: 0;
+    padding-bottom: 45%;
+    border: black 3px solid;  
+    transition: all ease-in 0.3s;
+}
+
+.cssList>div:hover {
+    transform: scale(1.01);
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.16), 0 3px 15px rgba(221, 221, 221, 0.521);
+
+}
