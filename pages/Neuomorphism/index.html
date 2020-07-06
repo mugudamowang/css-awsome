@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuomorphism</title>
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
+            border: 2px solid #252525;
+        }
+
+        .neu {
+            transition: all 30ms ease-in-out;
+            background-color: #3c3c3c;
+            background: linear-gradient(135deg, #2c2c2c, #181818);
+            border: 2px solid #252525;
+            box-shadow: 1rem 1rem 2rem #0e0e0e, -1rem -1rem 2rem #363636;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 5rem;
+            color: #eee;
+            font-size: 4rem;
+        }
+
+        .neu:hover {
+            background: none;
+            cursor: pointer;
+        }
+
+        .neu:active {
+            box-shadow: 0 0 0 #222;
+        }
+
+        .neu:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box neu">👍</div>
+</body>
+
+</html>
