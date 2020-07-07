@@ -13,7 +13,7 @@ body {
 
 body.day {
     transition: all 0.3s ease-in-out;
-    background-color: #e2e2e2;
+    background-color: #e2e2e2f3;
 }
 
 
@@ -40,7 +40,7 @@ body.day {
 }
 
 .neu.day {
-    background: linear-gradient(135deg, #fff, #cfcfcf67);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.822), #e2e2e2d3);
     box-shadow:
         1rem 1rem 2rem #969696da,
         -1rem -1rem 2rem #fff;
