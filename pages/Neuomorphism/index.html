@@ -18,11 +18,18 @@
 
 </body>
 <script>
-    
+    let body = document.querySelector('body')
+    let el = document.querySelector('button')
     let toggle = document.querySelector('#toggle--daynight')
-    toggle.addEventListener('click',(e)=>{
-        
-        // toggle.style.filter= "invert(100%)"
+    toggle.addEventListener('click', (e) => {
+        if (body.classList[0] === undefined) {
+            body.classList.add('day')
+            el.classList.add('day')
+        }
+        else {
+            body.classList.remove('day')
+            el.classList.remove('day')
+        }
     })
 </script>
 
