@@ -13,24 +13,28 @@
     <div class="toggle toggle--daynight">
         <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
         <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
+        <p>switch mode</p>
     </div>
     <button class="box neu">👍</button>
 
 </body>
 <script>
-    let body = document.querySelector('body')
-    let el = document.querySelector('button')
-    let toggle = document.querySelector('#toggle--daynight')
-    toggle.addEventListener('click', (e) => {
-        if (body.classList[0] === undefined) {
-            body.classList.add('day')
-            el.classList.add('day')
-        }
-        else {
-            body.classList.remove('day')
-            el.classList.remove('day')
-        }
-    })
+    !(function switchToggle() {
+        let body = document.querySelector('body')
+        let el = document.querySelector('button')
+        let toggle = document.querySelector('#toggle--daynight')
+        toggle.addEventListener('click', (e) => {
+            if (body.classList[0] === undefined) {
+                body.classList.add('day')
+                el.classList.add('day')
+                toggle.nextElementSibling.nextElementSibling.style.color = 'black'
+            } else {
+                toggle.nextElementSibling.nextElementSibling.style.color = 'white'
+                body.classList.remove('day')
+                el.classList.remove('day')
+            }
+        })
+    }).call()
 </script>
 
 </html>

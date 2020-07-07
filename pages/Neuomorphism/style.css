@@ -12,6 +12,7 @@ body {
 }
 
 body.day {
+    transition: all 0.3s ease-in-out;
     background-color: #e2e2e2;
 }
 
@@ -25,10 +26,12 @@ body.day {
 }
 
 .neu {
-    transition: all 30ms ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: linear-gradient(135deg, #2c2c2c, #181818);
-    border: 2px solid #252525;
-    box-shadow: 1rem 1rem 2rem #0e0e0e, -1rem -1rem 2rem #363636;
+    border: transparent;
+    box-shadow:
+        1rem 1rem 2rem #0e0e0e,
+        -1rem -1rem 2rem #363636;
     width: 200px;
     height: 200px;
     border-radius: 5%;
@@ -37,11 +40,10 @@ body.day {
 }
 
 .neu.day {
-    background: linear-gradient(135deg,#fdfbfc,#cfcfcf67);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: linear-gradient(135deg, #fff, #cfcfcf67);
     box-shadow:
-        -6px -6px 26px 0 rgba(255, 255, 255, 0.83),
-        6px 6px 16px 0 rgba(217, 210, 200, 0.83);
+        1rem 1rem 2rem #969696da,
+        -1rem -1rem 2rem #fff;
 }
 
 .neu:hover {
@@ -49,12 +51,22 @@ body.day {
     cursor: pointer;
 }
 
+.neu.day:hover {
+    background: none;
+    cursor: pointer;
+}
+
 .neu:active {
-    box-shadow: 0 0 0 #222;
+    box-shadow:
+        inset -1rem -1rem 2rem #0e0e0ed3,
+        inset 1rem 1rem 2rem #3d3d3d;
+    /* box-shadow: 0 0 0 #222; */
 }
 
 .neu.day:active {
-    box-shadow: 0 0 0 #222;
+    box-shadow:
+        inset 1rem 1rem 2rem #fff,
+        inset -1rem -1rem 2rem #969696da;
 }
 
 .neu:focus {
@@ -70,6 +82,7 @@ body.day {
     text-align: center;
     margin-top: 40px;
     user-select: none;
+    color: white;
 }
 
 .toggle--checkbox {
@@ -231,6 +244,7 @@ body.day {
 }
 
 .toggle--daynight .toggle--checkbox:checked+.toggle--btn>.toggle--feature {
+
     opacity: 0;
     box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 -4px, rgba(255, 255, 255, 0.1) 12px 10px 0 -5px, #fff 38px 18px 0 -3px, rgba(255, 255, 255, 0.1) 32px 34px 0 -4px, #fff 20px 24px 0 -5.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
     animation: none;
