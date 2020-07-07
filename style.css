@@ -31,6 +31,9 @@ body {
 }
 
 iframe{
+    border-radius: 5%;
+    border: transparent;
+    overflow: hidden;
     display: block;
     width: 100%;
 }
@@ -94,6 +97,22 @@ main.show {
     box-shadow: 0 3px 15px rgba(255, 255, 255, 0.16), 0 3px 15px rgba(221, 221, 221, 0.521);
 }
 
+svg{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+a{
+    display: inline-flex;
+    text-decoration:none;
+    color: white;
+    transition: all 0.2s linear;
+}
+a:hover{
+    color: red;
+}
+
 .cssList {
     display: flex;
     width: 100%;
@@ -104,6 +123,9 @@ main.show {
 
 
 .cssList>div {
+    position: relative;
+    font-size: 16px;
+    text-align: center;
     min-width: 225px;
     overflow: hidden;
     margin: 10px;
@@ -111,13 +133,13 @@ main.show {
     width: 30%;
     height: 0;
     padding-bottom: 45%;
-    box-shadow: 1rem 1rem 2rem #0e0e0e, -1rem -1rem 2rem #363636;
+    box-shadow: 0 0 0 #222;
     border-radius: 1rem;
+    border: #363636 2px solid;
     transition: all ease-in 0.3s;
 }
 
 .cssList>div:hover {
-    transform: scale(1.01);
-    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.16), 0 3px 15px rgba(221, 221, 221, 0.521);
-
+    border: transparent;
+    box-shadow: 1rem 1rem 2rem #0e0e0e, -1rem -1rem 2rem #363636;
 }
