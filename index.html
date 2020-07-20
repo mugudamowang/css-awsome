@@ -15,9 +15,10 @@
         <h1>This is My CSS collections<sup>from <a href="https://codepen.io/">codepen</a></sup></h1>
         <nav>
             <ul>
-                <li>github</li>
-                <li>home</li>
-                <li>bilibili</li>
+                
+                <li><a href="https://www.bukun.top/">home</a></li>
+                <li><a href="https://github.com/mugudamowang" target="_blank">github</a></li>
+                <li><a href="https://space.bilibili.com/114251344" target="_blank">bilibili</a></li>
             </ul>
         </nav>
         <span class="divider"></span>
@@ -38,10 +39,22 @@
                             fill="#ffffff" p-id="2190"></path>
                     </svg>
                 </a>
-                <iframe id='ifm' src="pages\Neuomorphism\index.html"></iframe>
+                <iframe class='ifm' src="pages\Neuomorphism\index.html"></iframe>
             </div>
             <div>
-                <p>粉碎</p>
+                <a href="./pages/skeuomorphism/index.html" target="_blank">
+                    <p>拟物3D图标</p>
+                    <svg t="1594090096955" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2188" width="200" height="200">
+                        <path
+                            d="M874.666667 554.666667a21.333333 21.333333 0 0 0-21.333334 21.333333v277.333333H170.666667V170.666667h277.333333a21.333333 21.333333 0 0 0 0-42.666667H149.333333a21.333333 21.333333 0 0 0-21.333333 21.333333v725.333334a21.333333 21.333333 0 0 0 21.333333 21.333333h725.333334a21.333333 21.333333 0 0 0 21.333333-21.333333V576a21.333333 21.333333 0 0 0-21.333333-21.333333z"
+                            fill="#ffffff" p-id="2189"></path>
+                        <path
+                            d="M874.666667 128H661.333333a21.333333 21.333333 0 0 0 0 42.666667h161.834667L560.917333 432.917333a21.333333 21.333333 0 1 0 30.165334 30.165334L853.333333 200.832V362.666667a21.333333 21.333333 0 0 0 42.666667 0V149.333333a21.333333 21.333333 0 0 0-21.333333-21.333333z"
+                            fill="#ffffff" p-id="2190"></path>
+                    </svg>
+                </a>
+                <iframe class='ifm' src="pages\skeuomorphism\index.html"></iframe>
             </div>
             <div>3</div>
             <div>4</div>
@@ -53,32 +66,6 @@
     </main>
     <footer></footer>
 </body>
-<script>
-    // var buffer = 100; //scroll bar buffer
-    // var iframe = document.getElementById('ifm');
-
-    // function resizeIframe() {
-    //     var height = document.documentElement.clientHeight;
-    //     height -= pageY(document.getElementById('ifm')) + buffer;
-    //     height = (height < 0) ? 0 : height;
-    //     document.getElementById('ifm').style.height = height + 'px';
-    // }
-
-    let iframe = document.getElementById('ifm');
-
-    function resizeIframe() {
-        let parentHeight = iframe.parentElement.clientHeight - 50;
-        document.getElementById('ifm').style.height = parentHeight + 'px';
-    }
-    resizeIframe();
-    window.onresize = resizeIframe;
-
-    !(function load() {
-        let divider = document.querySelector('.divider')
-        divider.classList.add('dive')
-        let main = document.querySelector('main')
-        main.classList.add('show')
-    }).call()
-</script>
+<script src="main.js"></script>
 
 </html>
