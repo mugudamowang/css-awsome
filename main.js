@@ -13,18 +13,18 @@
             this.view = view
             this.bindEvent()
         },
-        bindEvent: function () {
+        bindEvent: function () {    //绑定事件
             this.resize()
             window.onresize = this.resize()
             this.load()
         },
-        resize: function () {
+        resize: function () {   //高度自适应
             var parentHeight = this.view[0].parentElement.clientHeight - 50;    //父组件高度
             for (var i = 0; i < this.view.length; i++) {
                 this.view[i].style.height = parentHeight + 'px';
             }
         },
-        load: function () {
+        load: function () {     //加载动画
             let divider = document.querySelector('.divider')
             divider.classList.add('dive')
             let main = document.querySelector('main')
