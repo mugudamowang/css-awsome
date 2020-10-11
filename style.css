@@ -105,7 +105,7 @@ svg{
 
 a{
     display: inline-flex;
-    text-decoration:none;
+    text-decoration: underline;
     color: white;
     transition: all 0.2s linear;
 }
