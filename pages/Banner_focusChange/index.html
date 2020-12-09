@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Banner focus change">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner focus change</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {margin: 0;
+            height: 100vh;
+            background-color: #26B2FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            flex: 1 1 1;
+            height: 155px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        header div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            --offset: 0px;
+            --blur: 2px;
+        }
+
+        header>div>img {
+            display: block;
+            width: 130%;
+            height: 100%;
+            object-fit: cover;
+            transform: translatex(var(--offset));
+            filter: blur(var(--blur));
+            transition: all ease-in;
+        }
+
+        main {
+            background-color: #26B2FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex: 1;
+            font-size: 50px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./assets/bilibili-autumn-1.png" alt="#">
+        </div>
+        <div>
+            <img src="./assets/bilibili-autumn-2.png" alt="#">
+        </div>
+        <div>
+            <img src="./assets/bilibili-autumn-3.png" alt="#">
+        </div>
+        <div>
+            <img src="./assets/bilibili-autumn-4.png" alt="#">
+        </div>
+        <div>
+            <img src="./assets/bilibili-autumn-5.png" alt="#">
+        </div>
+        <div>
+            <img src="./assets/bilibili-autumn-6.png" alt="#">
+        </div>
+    </header>
+    <main>
+        <div>Bilibili</div>
+    </main>
+</body>
+
+<script>
+    const images = document.querySelectorAll('header > div > img')
+
+    document.querySelector('header').addEventListener('mousemove', (e) => {
+        let percentage = e.clientX / window.outerWidth
+        let offset = 10 * percentage
+        let blur = 20
+
+        for (let [index, image] of images.entries()) {
+            offset *= 1.3
+
+            let blurValue = (Math.pow((index / images.length - percentage), 2) * blur)
+
+            image.style.setProperty('--offset', `${offset}px`)
+            image.style.setProperty('--blur', `${blurValue}px`)
+        }
+    })
+</script>
+
+</html>
