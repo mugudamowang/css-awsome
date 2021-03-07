@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Typewriter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Hello, suck world!</h1>
+</body>
+
+<script>
+    //获取element
+    const h1 = document.querySelector('h1')
+    h1.innerHTML = h1.textContent.replace(/\S/g, "<span>$&</span>")
+
+    //设置delay, 避免同时进行动画
+    let delay = 0
+    document.querySelectorAll('span').forEach((span, index) => {
+        delay += 0.1
+
+        // if (index === 6) delay += 0.3
+
+        span.style.setProperty('--delay', `${delay}s`)
+    })
+
+    //对游标进行优化
+    h1.addEventListener('animationend', (e) => {
+        if (e.target === document.querySelector('h1 span:last-child')) {
+            h1.classList.add('ended')
+        }
+    })
+</script>
+
+</html>
